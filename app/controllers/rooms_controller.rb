@@ -17,7 +17,7 @@ class RoomsController < ApplicationController
 
   def create
     @room = current_user.rooms.build(room_params)
-    if @room.save
+    if @room.save!
       if params[:images]
         params[:images].each  do |image|
           @room.photos.create(image: image)
@@ -25,11 +25,13 @@ class RoomsController < ApplicationController
       end
         @photos = @room.photos
         redirect_to edit_room_path(@room), notice: "Criado..."
-    end
+      else
+        render :new
+      end
   end
   def edit
     if current_user.id == @room.user.id
-      @photo = @room.photos
+      @photos = @room.photos
     else
       redirect_to root_path, notice: "Usuario sem previlegios."
     end
@@ -42,8 +44,10 @@ class RoomsController < ApplicationController
           @room.photos.create(image: image)
         end
       end
-      redirect_to edit_room_path(@room), notice: "Actualizado..."
-    end
+         redirect_to edit_room_path(@room), notice: "Actualizado..."
+       else
+        render :edit
+       end
   end
 
   private

@@ -6,6 +6,10 @@ body {
   color: #565a5c;
   background-color: #F8F8F8;
 }
+.lembrar {
+  font-weight: bold;
+  margin-top: 10px;
+}
 .container {
   width: 80%;
   align-content: flex-end;
@@ -19,6 +23,7 @@ body {
   font-weight: 400;
 }
 .btn-primary.btn {
+  margin-top: 10px;
   border: 1px solid #FF5A5F;
   border-radius: 2px;
   font-weight: bold;
@@ -143,6 +148,46 @@ input[type="checkbox"]:checked:before {
   text-align: center;
   width: 1.25em;
 }
+
+.btn-file {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-file input[type=file] {
+  position: absolute;
+  top: 0;
+  right: 0;
+  min-width: 100%;
+  min-height: 100%;
+  font-size: 100px;
+  text-align: right;
+  filter: alpha(opacity=0);
+  opacity: 0;
+  outline: none;
+  background: white;
+  cursor: inherit;
+  display: block;
+}
+
+.panel-heading.preview {
+  padding: 0;
+
+}
+
+.panel-heading.preview img{
+  width: 100%;
+}
+
+.extras li {
+  margin-bottom: 10px;
+  list-style-type: disc;
+}
+
+.text-line-through {
+  text-decoration: line-through;
+}
+
 .row-check {
   padding-left: 4px;
 }

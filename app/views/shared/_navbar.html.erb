@@ -13,33 +13,34 @@
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
 
-            <% if (!user_signed_in?) %>
-              <li><%= link_to "Entrar", new_user_session_path %></li>
-              <li><%= link_to "Cadastre-se", new_user_registration_path %></li>
-  
-            <% else %>
-                <li class="dropdown">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                             <%= image_tag avatar_url(current_user), class: "img-circle avatar-small" %>&nbsp;
-                             <%= current_user.fullname %><span class="caret"></span>
-                           </a>
-                  
-                  <ul class="dropdown-menu">
-                    <li><a href="#">Tuas Viagens</a></li>
-                    <li><a href="#">Lista de Desejos</a></li>
-                    <li><%= link_to "Editar Perfil", edit_user_registration_path %></li>
-                    <li role="separator" class="divider"></li>
-                    <li><a href="#">Configuracoes de Usuario</a></li>
-                    <li><%= link_to "Sair", destroy_user_session_path, method: :delete %></li>
-                  </ul>
-                </li>
-            <% end %>
+            
             <li>
               <a href="#"><i class="fa fa-envelope-o"></i> Mensagens</a>
             </li>
             <li>
               <a href="#"><i class="fa fa-home fa-lg"></i> Torne-se Hospedeiro</a>
             </li>
+            <% if (!user_signed_in?) %>
+              <li><%= link_to "Entrar", new_user_session_path %></li>
+              <li><%= link_to "Cadastre-se", new_user_registration_path %></li>
+  
+                <% else %>
+                    <li class="dropdown">
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                 <%= image_tag avatar_url(current_user), class: "img-circle avatar-small" %>&nbsp;
+                                 <%= current_user.fullname %><span class="caret"></span>
+                               </a>
+                      
+                      <ul class="dropdown-menu">
+                        <li><a href="#">Tuas Viagens</a></li>
+                        <li><a href="#">Lista de Desejos</a></li>
+                        <li><%= link_to "Editar Perfil", edit_user_registration_path %></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="#">Configuracoes de Usuario</a></li>
+                        <li><%= link_to "Sair", destroy_user_session_path, method: :delete %></li>
+                      </ul>
+                    </li>
+                <% end %>
           </ul>
         </div><!--/.nav-collapse -->
       </div>

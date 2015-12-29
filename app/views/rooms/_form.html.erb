@@ -46,24 +46,28 @@
               </div>
             </div>
           </div>
+
           <div class="row">
             <div class="form-group">
               <label>Listagem</label>
               <%= f.text_field :listing_name, placeholder: "Seja claro e objectivo", class: "form-control" %>
             </div>
           </div>
+
           <div class="row">
             <div class="form-group">
               <label>Descricao</label>
-              <%= f.text_area :listing_name, rows: 5, placeholder: "Mais detalhes sobre seu espaço", class: "form-control" %>
+              <%= f.text_area :summary, rows: 5, placeholder: "Mais detalhes sobre seu espaço", class: "form-control" %>
             </div>
           </div>
+
           <div class="row">
             <div class="form-group">
-              <label>endereço</label>
-              <%= f.text_field :listing_name, placeholder: "Qual e o seu endereço?", class: "form-control" %>
+              <label>endereco</label>
+              <%= f.text_field :address, placeholder: "Qual e o seu endereço?", class: "form-control" %>
             </div>
           </div>
+
           <div class="row">
             <div class="col-md-4">
               <div class="form-group">
@@ -83,6 +87,7 @@
               </div>
             </div>
           </div>
+
           <div class="row">
             <div class="col-md-4">
               <div class="form-group">
@@ -100,13 +105,13 @@
               <div class="form-group">
                 <span class="btn btn-default btn-file">
                   <i class="fa fa-cloud-upload fa-lg"></i> Caregar fotos
-                  <%= file_field_tag "images[]", type: :file, multipart: true %>
+                  <%= file_field_tag "images[]", type: :file, multiple: true %>
                 </span>
               </div>
             </div>
           </div>
 
-          <div class="photos"><%= render 'photos/list' %></div>
+          <div id="photos"><%= render 'photos/list' %></div>
 
           <div class="row-check">
             <div class="form-group">

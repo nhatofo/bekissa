@@ -1,9 +1,13 @@
 <div class="row">
   <div class="col-md-6 col-md-offset-3 text-center">
-     <%= link_to "Entre com a tua conta Facebook", user_omniauth_authorize_path(:facebook), class: "btn btn-primary" %> ou
-     <%= link_to "Entre com a tua conta Google", user_omniauth_authorize_path(:google_oauth2), class: "btn btn-primary" %>
-     
-     <h2>Entrar</h2>
+       <div class "row">
+           <%= link_to "Entre com a tua conta Facebook", user_omniauth_authorize_path(:facebook), class: "btn btn-primary" %>
+       </div>
+          <h4>ou</h4> 
+       <div class="row"  >
+           <%= link_to "Entre com a tua conta Google", user_omniauth_authorize_path(:google_oauth2), class: "btn btn-primary" %>
+       </div>
+     <h4>Entrar</h4>
 
         <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
       
@@ -17,7 +21,9 @@
 
           <% if devise_mapping.rememberable? -%>
             <div class="form-group">
-              <%= f.check_box :remember_me %> Lembre-me
+               <div class="row">
+                   <%= f.check_box :remember_me %><span class="lembrar" >Lembre-me</span>
+               </div>
             </div>
           <% end -%>
 
