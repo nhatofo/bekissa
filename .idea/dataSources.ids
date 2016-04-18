@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source name="Rails bekissa: production" uuid="e074b2e1-3d47-47a1-b004-a8076b6d1922">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
+  <data-source name="Rails bekissa: test" uuid="a17dbfe4-86aa-4456-9714-1e3beb4eae35">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
+  <data-source name="Rails bekissa: development" uuid="3413b8fe-d3cd-446b-86b6-58fdf77089f4">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
+</component>

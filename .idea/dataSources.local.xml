@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="Rails bekissa: production" uuid="e074b2e1-3d47-47a1-b004-a8076b6d1922">
+      <first-sync>true</first-sync>
+      <user-name>bekissa</user-name>
+      <user-password>df96df8fdf97df8adfefdfe4dffcdff1df8ddfe8dfefdfe1dfe3dff9dff9dfebdff5dfeedfebdffedfebdfe8dfebdff9dfefdff5dffadfebdff9dff9dffddfe5dff8dfeedf8ddff7df8adf8fdf94</user-password>
+    </data-source>
+    <data-source name="Rails bekissa: test" uuid="a17dbfe4-86aa-4456-9714-1e3beb4eae35">
+      <first-sync>true</first-sync>
+    </data-source>
+    <data-source name="Rails bekissa: development" uuid="3413b8fe-d3cd-446b-86b6-58fdf77089f4">
+      <first-sync>true</first-sync>
+      <user-name>railsdev</user-name>
+      <user-password>dfe6dfdedfc7df9fdfd8dfdcdfcddf99dfd8dfcbdfc6</user-password>
+    </data-source>
+  </component>
+</project>

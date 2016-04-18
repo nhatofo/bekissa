@@ -2,7 +2,8 @@
 	<div class="col-md-3">
 		<ul class="sidebar-list">
 			<li class="sidebar-item"><%= link_to "Suas Listangens", rooms_path, class: "sidebar-link active" %></li>
-			<li class="sidebar-item"><%= link_to "Reservas", rooms_path, class: "sidebar-link" %></li>
+			<li class="sidebar-item"><%= link_to "Suas Reservas", your_reservations_path, class: "sidebar-link" %></li>
+      <li class="sidebar-item"><%= link_to "Suas Viagens", your_trips_path, class: "sidebar-link  " %></li>
 		</ul>
 	</div>
 	<div class="col-md-9">
@@ -24,8 +25,8 @@
 							<%= link_to "Atualizar", edit_room_path(room), class: "btn btn-primary" %>
 						</div>
 					</div>
+					<hr>
 				<% end %>
-
 			</div>
 		</div>
 	</div>

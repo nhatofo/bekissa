@@ -1,7 +1,6 @@
 source 'https://rubygems.org'
 
-
-gem 'rails', '4.2.4'
+gem 'rails', '4.2.1'
 gem 'pg'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.1.0'
@@ -18,12 +17,14 @@ gem 'devise'
 
 gem 'toastr-rails'
 
-
 gem 'omniauth'
 gem 'omniauth-facebook'
 gem 'omniauth-google-oauth2'
-gem 'paperclip', git: 'git://github.com/thoughtbot/paperclip.git'
+
+gem 'paperclip'
+
 gem 'geocoder'
+gem 'jquery-ui-rails'
 
 group :development, :test do
   gem 'byebug'
