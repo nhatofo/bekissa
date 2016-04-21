@@ -14,11 +14,15 @@
           <ul class="nav navbar-nav navbar-right">
 
 
-            <li>
-              <a href="#"><i class="fa fa-envelope-o"></i> Mensagens</a>
+            <li >
+              <%= link_to conversations_path do %>
+                 <i class="fa fa-envelope-o"></i> Mensagens
+              <% end %>
             </li>
             <li>
-              <a href="#"><i class="fa fa-home fa-lg"></i> Anuncie a sua propriedade!</a>
+              <%= link_to new_room_path do %>
+                 <i class="fa fa-home fa-lg"></i> Anuncie Sua Propriedade
+              <% end %>
             </li>
             <% if (!user_signed_in?) %>
               <li><%= link_to "Entrar", new_user_session_path %></li>
